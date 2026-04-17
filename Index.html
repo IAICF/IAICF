@@ -54,7 +54,7 @@
 
     <!-- Citation -->
     <div style="margin-top:10px;padding-top:10px;border-top:0.5px solid #d0d0d0;">
-      <div style="font-size:12px;color:#1a1a18;font-family:Arial,sans-serif;line-height:1.6;"><strong style="color:#1a3a6b;">Citation:</strong> Khavandkar, E. <em>et al.</em> (2026). "Interdisciplinary AI Competency Framework for Higher Education (IAICF)", Version 3 [April], York: Advance HE.</div>
+      <div style="font-size:12px;color:#1a1a18;font-family:Arial,sans-serif;line-height:1.6;"><strong style="color:#1a3a6b;">Citation:</strong> Khavandkar, E., Cara, M., Ozdemir, O., Al Mamun, A., Demirbilek, M., Zayed, R., Taghizadeh Fard, N. and Araz, M.M. (2026). "Interdisciplinary AI Competency Framework for Higher Education (IAICF)", Version 3 [April], York: Advance HE.</div>
     </div>
 
     <!-- Stat pills - split into two rows -->
@@ -145,6 +145,7 @@
 .nav-btn{padding:7px 13px;font-size:11.5px;font-weight:700;border:1.5px solid #ccc;border-radius:20px;cursor:pointer;background:#fff;color:#555;transition:all 0.15s;}
 .nav-btn:hover{border-color:#888;color:#222;}
 .nav-btn.active{border-color:transparent;color:#fff;}
+.nb-welcome.active{background:#002060;}
 .nb-preface.active{background:#002060;}
 .nb-inter.active{background:#1a3a6b;}
 .nb-all.active{background:#444441;}
@@ -228,7 +229,8 @@
 <div class="wrap">
   <h2 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">IAICF expert panel full interactive dashboard v6</h2>
   <div class="nav-bar">
-    <button class="nav-btn nb-preface active" onclick="showPage('preface')">Preface</button>
+    <button class="nav-btn nb-welcome active" onclick="showPage('welcome')">Welcome to IAICF</button>
+    <button class="nav-btn nb-preface" onclick="showPage('preface')">Preface</button>
     <button class="nav-btn nb-inter" onclick="showPage('inter')">National Interdisciplinary Panel (Overview)</button>
     <button class="nav-btn nb-all" onclick="showPage('all')">National Discipline-Specific Panels (Overview)</button>
     <button class="nav-btn nb-d1" onclick="showPage('d1')">Domain 1</button>
@@ -248,7 +250,78 @@
     <div class="leg-item"><div class="leg-dot" style="background:#E6F1FB;border:1px solid #185FA5;"></div>Applicable (renamed)</div>
   </div>
 
-  <div id="page-preface" class="page">
+  <div id="page-welcome" class="page active">
+  <div style="max-width:860px;margin:0 auto;padding:1rem 0 2.5rem;">
+
+    <!-- Hero banner -->
+    <div style="background:linear-gradient(135deg,#002060 60%,#01B7C6);border-radius:12px;padding:2.5rem 2.5rem 2rem;margin-bottom:2rem;color:#fff;">
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#FB8E15;margin-bottom:10px;">Funded by Advance HE &nbsp;·&nbsp; Fund ID: 0000000204</div>
+      <div style="font-size:28px;font-weight:700;line-height:1.25;margin-bottom:0.7rem;">Welcome to the IAICF Expert Panel Dashboard</div>
+      <div style="font-size:14px;opacity:0.85;line-height:1.6;">Interdisciplinary AI Competency Framework for Higher Education &nbsp;·&nbsp; Version 3 &nbsp;·&nbsp; April 2026</div>
+    </div>
+
+    <!-- About text -->
+    <div style="font-size:15px;color:#1a1a18;line-height:1.9;margin-bottom:1.8rem;">
+      <p style="margin-bottom:1rem;">Funded by Advance HE, the Interdisciplinary AI Competency Framework for Higher Education (IAICF) is a sector-wide, evidence-based initiative developed by academics, for academics. Its purpose is to ensure that AI literacy becomes a shared graduate capability across every discipline - not a specialism confined to computing or engineering.</p>
+      <p style="margin-bottom:1rem;">The framework spans <strong>six domains</strong> and <strong>35 competencies</strong>, covering conceptual understanding of AI systems, critical evaluation of outputs, ethical and social implications, practical application, governance and accountability, and inclusive AI literacy. Each competency is mapped across FHEQ Levels 4 to 8.</p>
+      <p>The evidence base behind the framework is substantial. The National Survey attracted <strong>856 expressions of interest</strong>, with <strong>622 academics from 61 universities</strong> completing the survey. A further <strong>150 academics</strong> participated in five discipline-specific National Expert Panels, and <strong>103 academics</strong> attended the National Interdisciplinary Panel - together contributing over 12 hours of structured expert discussion. This dashboard presents the findings, decisions, and ratified outcomes from those panels.</p>
+    </div>
+
+    <!-- Stats -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:2rem;">
+      <div style="background:#002060;border-radius:10px;padding:16px 10px;text-align:center;color:#fff;">
+        <div style="font-size:26px;font-weight:700;line-height:1;">622</div>
+        <div style="font-size:11px;margin-top:6px;opacity:0.85;line-height:1.4;">Survey participants<br>61 universities</div>
+      </div>
+      <div style="background:#01B7C6;border-radius:10px;padding:16px 10px;text-align:center;color:#fff;">
+        <div style="font-size:26px;font-weight:700;line-height:1;">150</div>
+        <div style="font-size:11px;margin-top:6px;opacity:0.85;line-height:1.4;">Discipline-specific<br>panel participants</div>
+      </div>
+      <div style="background:#FB8E15;border-radius:10px;padding:16px 10px;text-align:center;color:#fff;">
+        <div style="font-size:26px;font-weight:700;line-height:1;">103</div>
+        <div style="font-size:11px;margin-top:6px;opacity:0.85;line-height:1.4;">Interdisciplinary<br>panel participants</div>
+      </div>
+      <div style="background:#002060;border-radius:10px;padding:16px 10px;text-align:center;color:#fff;">
+        <div style="font-size:26px;font-weight:700;line-height:1;">35</div>
+        <div style="font-size:11px;margin-top:6px;opacity:0.85;line-height:1.4;">Competencies across<br>6 domains</div>
+      </div>
+    </div>
+
+    <!-- Guide to tabs -->
+    <div style="margin-bottom:0.5rem;">
+      <div style="font-size:17px;font-weight:700;color:#002060;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:1rem;padding-bottom:6px;border-bottom:1.5px solid #e0dcd2;">Guide to this Dashboard</div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="background:#fff;border:0.5px solid #ddd;border-radius:8px;padding:12px 16px;display:flex;gap:14px;align-items:flex-start;">
+          <span style="background:#002060;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:12px;white-space:nowrap;flex-shrink:0;">Preface</span>
+          <span style="font-size:14px;color:#444;line-height:1.55;">Background and rationale for the project, the full framework structure with domain-level competency counts and Universal/Contextual classification, and the scale of national engagement.</span>
+        </div>
+        <div style="background:#fff;border:0.5px solid #ddd;border-radius:8px;padding:12px 16px;display:flex;gap:14px;align-items:flex-start;">
+          <span style="background:#1a3a6b;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:12px;white-space:nowrap;flex-shrink:0;">National Interdisciplinary Panel (Overview)</span>
+          <span style="font-size:14px;color:#444;line-height:1.55;">The ratified decisions from the National Interdisciplinary Panel (15 April 2026) - showing each competency, the panel's decision, and its Universal or Contextual classification.</span>
+        </div>
+        <div style="background:#fff;border:0.5px solid #ddd;border-radius:8px;padding:12px 16px;display:flex;gap:14px;align-items:flex-start;">
+          <span style="background:#444441;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:12px;white-space:nowrap;flex-shrink:0;">National Discipline-Specific Panels (Overview)</span>
+          <span style="font-size:14px;color:#444;line-height:1.55;">A cross-disciplinary overview table showing how each competency was assessed across the five discipline-specific panels - Sciences, Arts &amp; Humanities, Education, Social Sciences, and Medicine.</span>
+        </div>
+        <div style="background:#fff;border:0.5px solid #ddd;border-radius:8px;padding:12px 16px;display:flex;gap:14px;align-items:flex-start;">
+          <span style="background:#0F6E56;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:12px;white-space:nowrap;flex-shrink:0;">Domain 1 – 6</span>
+          <span style="font-size:14px;color:#444;line-height:1.55;">Each domain tab provides detailed competency cards showing the national survey data, discipline-specific panel decisions, and the National Interdisciplinary Panel ratification for every competency.</span>
+        </div>
+        <div style="background:#fff;border:0.5px solid #ddd;border-radius:8px;padding:12px 16px;display:flex;gap:14px;align-items:flex-start;">
+          <span style="background:#002060;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:12px;white-space:nowrap;flex-shrink:0;">Project Team</span>
+          <span style="font-size:14px;color:#444;line-height:1.55;">Profiles of the investigators, co-design research partners, academic advisors, and industry advisors who contributed to the IAICF project.</span>
+        </div>
+        <div style="background:#fff;border:0.5px solid #ddd;border-radius:8px;padding:12px 16px;display:flex;gap:14px;align-items:flex-start;">
+          <span style="background:#002060;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:12px;white-space:nowrap;flex-shrink:0;">Contributors</span>
+          <span style="font-size:14px;color:#444;line-height:1.55;">The full list of National Expert Panel participants across all discipline-specific and interdisciplinary sessions (list to be confirmed).</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="page-preface" class="page">
   <div style="max-width:960px;margin:0 auto;padding:0.5rem 0 2rem;">
 
     <!-- Title -->
@@ -333,7 +406,7 @@
               <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:flex-start;">
                 <span style="background:#e8f4e8;color:#2d6a2d;font-size:12px;font-weight:600;padding:3px 10px;border-radius:12px;white-space:nowrap;">5 Universal</span>
                 <span style="background:#fdf0d8;color:#7a4d00;font-size:12px;font-weight:600;padding:3px 10px;border-radius:12px;white-space:nowrap;">1 Contextual</span>
-                <div style="font-size:12px;color:#666;line-height:1.7;width:100%;margin-top:4px;"><strong>3.1</strong> Personal Data &amp; Privacy · <strong>3.2</strong> Environmental Impact &amp; Sustainability · <strong>3.3</strong> AI's Impact on Work &amp; Society · <strong>3.4</strong> Preserving Human Agency · <strong>3.5</strong> Information Integrity &amp; Social Discourse · <strong>3.7</strong> Recognising Tasks Requiring Exclusively Human Judgement — all <em>Universal</em><br><strong>3.6</strong> <em>Recognising the Psycho-Emotional Effect of Human-Like AI Responses on Human Users</em> <span style="font-size:11px;color:#7a4d00;">(The panel decided a new title, formerly: Understanding Psychological Responses to Anthropomorphic AI Systems)</span> — <em>Contextual</em></div>
+                <div style="font-size:12px;color:#666;line-height:1.7;width:100%;margin-top:4px;"><strong>3.1</strong> Personal Data &amp; Privacy · <strong>3.2</strong> Environmental Impact &amp; Sustainability · <strong>3.3</strong> AI's Impact on Work &amp; Society · <strong>3.4</strong> Preserving Human Agency · <strong>3.5</strong> Information Integrity &amp; Social Discourse · <strong>3.7</strong> Recognising Tasks Requiring Exclusively Human Judgement - all <em>Universal</em><br><strong>3.6</strong> <em>Recognising the Psycho-Emotional Effect of Human-Like AI Responses on Human Users</em> <span style="font-size:11px;color:#7a4d00;">(The panel decided a new title, formerly: Understanding Psychological Responses to Anthropomorphic AI Systems)</span> - <em>Contextual</em></div>
               </div>
             </div>
           </div>
@@ -364,7 +437,7 @@
               <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:flex-start;">
                 <span style="background:#e8f4e8;color:#2d6a2d;font-size:12px;font-weight:600;padding:3px 10px;border-radius:12px;white-space:nowrap;">5 Universal</span>
                 <span style="background:#fdf0d8;color:#7a4d00;font-size:12px;font-weight:600;padding:3px 10px;border-radius:12px;white-space:nowrap;">2 Contextual</span>
-                <div style="font-size:12px;color:#666;line-height:1.7;width:100%;margin-top:4px;"><strong>5.2</strong> Documenting &amp; Attributing AI Contributions · <strong>5.3</strong> Legal &amp; Regulatory Frameworks · <strong>5.4</strong> Professional Ethics &amp; Sector-Specific Codes · <strong>5.5</strong> Intellectual Property, Copyright &amp; Training Data Ethics — <em>Universal</em><br><strong>5.1 + 5.6</strong> <em>Scrutinising AI System Origins, Transparency, and Reliability</em> (merged) — <em>Universal, scoped to regulated sectors and creative industries</em><br><strong>5.7 + 5.8</strong> <em>Maintaining Accountability and Governance in AI-Assisted Practice</em> (merged) — <em>Contextual</em></div>
+                <div style="font-size:12px;color:#666;line-height:1.7;width:100%;margin-top:4px;"><strong>5.2</strong> Documenting &amp; Attributing AI Contributions · <strong>5.3</strong> Legal &amp; Regulatory Frameworks · <strong>5.4</strong> Professional Ethics &amp; Sector-Specific Codes · <strong>5.5</strong> Intellectual Property, Copyright &amp; Training Data Ethics - <em>Universal</em><br><strong>5.1 + 5.6</strong> <em>Scrutinising AI System Origins, Transparency, and Reliability</em> (merged) - <em>Universal, scoped to regulated sectors and creative industries</em><br><strong>5.7 + 5.8</strong> <em>Maintaining Accountability and Governance in AI-Assisted Practice</em> (merged) - <em>Contextual</em></div>
               </div>
             </div>
           </div>
@@ -380,7 +453,7 @@
               <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:flex-start;">
                 <span style="background:#e8f4e8;color:#2d6a2d;font-size:12px;font-weight:600;padding:3px 10px;border-radius:12px;white-space:nowrap;">3 Universal</span>
                 <span style="background:#fdf0d8;color:#7a4d00;font-size:12px;font-weight:600;padding:3px 10px;border-radius:12px;white-space:nowrap;">1 Contextual</span>
-                <div style="font-size:12px;color:#666;line-height:1.7;width:100%;margin-top:4px;"><strong>6.2</strong> Designing Inclusive AI-Integrated Assessments — <em>Contextual (Education-specific)</em><br><strong>6.6</strong> Reflecting on AI's Impact on Personal Learning — <em>Universal</em><br><strong>6.1 + 6.5</strong> <em>Inclusive and Adaptive AI Use</em> (merged) — <em>Universal, scoped to Education and inclusive practice roles</em><br><strong>6.3 + 6.4</strong> <em>Evaluating AI Tools for Equity and Inclusive Access</em> (merged) — <em>Universal, scoped to international, multicultural, and widening participation contexts</em></div>
+                <div style="font-size:12px;color:#666;line-height:1.7;width:100%;margin-top:4px;"><strong>6.2</strong> Designing Inclusive AI-Integrated Assessments - <em>Contextual (Education-specific)</em><br><strong>6.6</strong> Reflecting on AI's Impact on Personal Learning - <em>Universal</em><br><strong>6.1 + 6.5</strong> <em>Inclusive and Adaptive AI Use</em> (merged) - <em>Universal, scoped to Education and inclusive practice roles</em><br><strong>6.3 + 6.4</strong> <em>Evaluating AI Tools for Equity and Inclusive Access</em> (merged) - <em>Universal, scoped to international, multicultural, and widening participation contexts</em></div>
               </div>
             </div>
           </div>
@@ -601,7 +674,7 @@
     <div style="background:#f0f4fa;border-left:4px solid #002060;border-radius:0 8px 8px 0;padding:2rem 2rem;text-align:center;">
       <div style="font-size:48px;margin-bottom:1rem;">📋</div>
       <div style="font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;font-weight:700;color:#002060;margin-bottom:0.75rem;">List to be Confirmed</div>
-      <p style="font-size:15px;color:#5a5850;line-height:1.85;max-width:560px;margin:0 auto;">The full list of contributors to the IAICF project — including National Survey respondents, Expert Panel participants, and Curriculum Prototyping Co-Design Workshop contributors — will be confirmed and published here in due course.</p>
+      <p style="font-size:15px;color:#5a5850;line-height:1.85;max-width:560px;margin:0 auto;">The full list of contributors to the IAICF project - including National Survey respondents, Expert Panel participants, and Curriculum Prototyping Co-Design Workshop contributors - will be confirmed and published here in due course.</p>
     </div>
   </div>
 </div>
@@ -716,14 +789,21 @@ function buildOV(){
 
 function card(num,title,stmt,rat,decHtml,badgeTxt,badgeCls,dataHtml,insightHtml,interBadge){
   interBadge = interBadge || '';
+  var isMerged = interBadge && interBadge.txt.indexOf('merged')!==-1;
+  var mergePartner = '';
+  if(isMerged){
+    var mMatch = interBadge.txt.match(/to be merged with ([\d.]+)/);
+    mergePartner = mMatch ? mMatch[1] : '';
+  }
+  var interType = interBadge ? (interBadge.cls==='b-green' ? 'Universal Competency' : 'Contextual Competency') : '';
+  var interText = isMerged
+    ? 'This competency was decided to be merged with <strong>' + mergePartner + '</strong>, and the combined competency was ratified by the National Interdisciplinary Panel as: <strong><span style=\'color:#1a3a6b;\'>' + interType + '</span></strong>'
+    : 'This competency was ratified by the National Interdisciplinary Panel as: <strong>' + (interBadge && interBadge.cls==='b-green' ? '<span style=\'color:#2d6a2d;\'>Universal Competency</span>' : '<span style=\'color:#7a4d00;\'>Contextual Competency</span>') + '</strong>';
   var interSection = interBadge
     ? '<div class="dec-row" style="background:#f0f8f0;border-top:0.5px solid #d0e8d0;">'+
         '<div class="dec-label" style="color:#1a1a18;">Findings from Evaluation and Consensus Voting by National Interdisciplinary Expert Panel</div>'+
         '<div style="font-size:11px;color:#2d6a2d;font-weight:500;margin-top:4px;line-height:1.6;">'+
-          'This competency was ratified by the National Interdisciplinary Panel as: <strong>'+
-          (interBadge.cls==='b-green' ? (interBadge.txt.indexOf('merged')!==-1 ? '<span style=\'color:#1a3a6b;\'>Universal Competency (to be merged)</span>' : '<span style=\'color:#2d6a2d;\'>Universal Competency</span>') : '<span style=\'color:#7a4d00;\'>Contextual Competency</span>')+
-          '</strong>'+
-          (interBadge.txt.indexOf('merged')!==-1 ? ' — '+interBadge.txt.replace(/^Ratified by the National Interdisciplinary Panel as: Universal Competency \(to be merged\)/,'').trim() : '')+
+          interText+
         '</div>'+
       '</div>'
     : '';
@@ -979,7 +1059,7 @@ function showPage(id){
 
   // Devtools detection removed
 
-  // Watermark overlay — invisible but present in any screenshot
+  // Watermark overlay - invisible but present in any screenshot
   var wm = document.createElement('div');
   wm.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:99999;opacity:0.04;';
   wm.style.backgroundImage = 'repeating-linear-gradient(45deg,transparent,transparent 200px,rgba(0,32,96,0.5) 200px,rgba(0,32,96,0.5) 202px)';
