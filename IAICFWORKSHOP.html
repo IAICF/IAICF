@@ -30,6 +30,25 @@ summary, .nav-btn { cursor: pointer !important; }
 body.window-blurred #content-wrapper { filter: blur(8px); transition: filter 0.1s; }
 </style>
 
+
+<style>
+#form-audit input, #form-audit textarea, #form-audit select,
+#form-a1b input, #form-a1b textarea, #form-a1b select,
+#form-a3 input, #form-a3 textarea, #form-a3 select {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  user-select: text !important;
+  pointer-events: auto !important;
+}
+#form-audit button, #form-a1b button, #form-a3 button {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+#form-audit button:hover, #form-a1b button:hover, #form-a3 button:hover {
+  opacity: 0.9;
+}
+</style>
+
 </head>
 <body>
 <div id="content-wrapper">
@@ -3683,7 +3702,32 @@ details summary > span:first-child { transition: transform 0.15s; }
     <div style="background:#002060;color:#fff;border-radius:8px;padding:14px 18px;font-size:13px;line-height:1.75;">
       <strong style="color:#FFD580;">Please leave this sheet with the facilitator at the end of the session.</strong>
       <div style="margin-top:6px;opacity:0.95;">Your responses - anonymised - feed directly into IAICF v3.0 framework revisions and the implementation toolkit. Happy for your institution to be credited? &nbsp; &#9744; Yes</div>
+    
+
+    <div style="margin-top:2.5rem;border-top:2px solid #1a3a6b;padding-top:1.5rem;">
+      <div style="background:linear-gradient(135deg,#1a3a6b 0%,#002060 100%);border-radius:10px;padding:18px 22px;margin-bottom:18px;color:#fff;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#FFD580;margin-bottom:6px;">Interactive Response Form</div>
+        <div style="font-size:18px;font-weight:700;">First Impressions Audit</div>
+        <div style="font-size:13px;opacity:0.9;margin-top:6px;">Record your first impressions of the competency titles and descriptors below and submit directly to the IAICF research team.</div>
+      </div>
+      <div id="form-audit" style="pointer-events:auto;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
+          <div><label for="audit_name" style="display:block;font-size:13px;font-weight:700;color:#002060;margin-bottom:6px;">Your Name</label><input type="text" id="audit_name" placeholder="Full name" style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;pointer-events:auto;user-select:text;-webkit-user-select:text;"></div>
+          <div><label for="audit_institution" style="display:block;font-size:13px;font-weight:700;color:#002060;margin-bottom:6px;">Institution</label><input type="text" id="audit_institution" placeholder="Your institution" style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;pointer-events:auto;user-select:text;-webkit-user-select:text;"></div>
+        </div>
+        <div style="margin-bottom:16px;"><label for="audit_discipline" style="display:block;font-size:13px;font-weight:700;color:#002060;margin-bottom:6px;">Discipline Group</label><select id="audit_discipline" style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;background:#fff;pointer-events:auto;"><option value="">Select your discipline group</option><option value="Physical Science, Engineering and Mathematics">Physical Science, Engineering and Mathematics</option><option value="Arts and Humanities">Arts and Humanities</option><option value="Education">Education</option><option value="Social Sciences, Law and Business">Social Sciences, Law and Business</option><option value="Medicine, Health and Life Sciences">Medicine, Health and Life Sciences</option></select></div>
+        <div style="margin-bottom:16px;"><label style="display:block;font-size:13px;font-weight:700;color:#002060;margin-bottom:6px;">Which competency titles, if any, are unclear or could be improved?</label><textarea id="audit_titles" rows="4" placeholder="List competency numbers and your suggested improvements..." style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;resize:vertical;pointer-events:auto;user-select:text;-webkit-user-select:text;"></textarea></div>
+        <div style="margin-bottom:16px;"><label style="display:block;font-size:13px;font-weight:700;color:#002060;margin-bottom:6px;">Which level descriptors seem unclear, too broad, or too narrow?</label><textarea id="audit_descriptors" rows="4" placeholder="Reference specific competency numbers and FHEQ levels..." style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;resize:vertical;pointer-events:auto;user-select:text;-webkit-user-select:text;"></textarea></div>
+        <div style="margin-bottom:16px;"><label style="display:block;font-size:13px;font-weight:700;color:#002060;margin-bottom:6px;">Are there contextual assumptions that do not apply to your discipline?</label><textarea id="audit_assumptions" rows="4" placeholder="Describe any assumptions that seem problematic..." style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;resize:vertical;pointer-events:auto;user-select:text;-webkit-user-select:text;"></textarea></div>
+        <div style="margin-bottom:16px;"><label style="display:block;font-size:13px;font-weight:700;color:#002060;margin-bottom:6px;">Any other first impressions or observations?</label><textarea id="audit_general" rows="3" placeholder="General comments..." style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;resize:vertical;pointer-events:auto;user-select:text;-webkit-user-select:text;"></textarea></div>
+        <div style="text-align:center;margin-top:20px;"><button onclick="submitAudit()" style="background:#1a3a6b;color:#fff;border:none;padding:14px 40px;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;pointer-events:auto;">Submit Responses via Email</button></div>
+      </div>
     </div>
+    <script>
+    function submitAudit(){var n=document.getElementById('audit_name').value.trim();var inst=document.getElementById('audit_institution').value.trim();var disc=document.getElementById('audit_discipline').value;if(!n||!inst||!disc){alert('Please complete Name, Institution, and Discipline Group.');return;}var b='IAICF First Impressions Audit Response\n========================\n\nName: '+n+'\nInstitution: '+inst+'\nDiscipline: '+disc+'\n\nUnclear Titles:\n'+document.getElementById('audit_titles').value+'\n\nDescriptor Issues:\n'+document.getElementById('audit_descriptors').value+'\n\nContextual Assumptions:\n'+document.getElementById('audit_assumptions').value+'\n\nGeneral Observations:\n'+document.getElementById('audit_general').value;window.location.href='mailto:e.khavandkar@bham.ac.uk,e.khavandkar@ucl.ac.uk?subject='+encodeURIComponent('IAICF Audit - '+n)+'&body='+encodeURIComponent(b);}
+    </script>
+
+</div>
 
   </div>
 </div>
@@ -4231,7 +4275,35 @@ details summary > span:first-child { transition: transform 0.15s; }
 
     <div style="background:#F8F8F6;border:1px dashed #999;border-radius:8px;padding:12px 16px;margin-top:20px;font-size:12.5px;line-height:1.65;color:#3a3a38;">
       <strong style="color:#1a3a6b;">What happens with this template:</strong> your completed module mapping will contribute to the IAICF case study bank, showing how the framework maps to real modules across disciplines. It will be anonymised unless you opt in to named attribution. The learning outcome adaptations you develop here are particularly valuable as exemplars for the toolkit.
+    
+
+    <div style="margin-top:2.5rem;border-top:2px solid #f47920;padding-top:1.5rem;">
+      <div style="background:linear-gradient(135deg,#f47920 0%,#c86d10 100%);border-radius:10px;padding:18px 22px;margin-bottom:18px;color:#fff;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#FFF3E0;margin-bottom:6px;">Interactive Response Form</div>
+        <div style="font-size:18px;font-weight:700;">Activity 1B: Module-Level Mapping</div>
+        <div style="font-size:13px;opacity:0.9;margin-top:6px;">Map IAICF competencies to your module and submit your implementation plan directly to the IAICF research team.</div>
+      </div>
+      <div id="form-a1b" style="pointer-events:auto;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
+          <div><label for="a1b_name" style="display:block;font-size:13px;font-weight:700;color:#c86d10;margin-bottom:6px;">Your Name</label><input type="text" id="a1b_name" placeholder="Full name" style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;pointer-events:auto;user-select:text;-webkit-user-select:text;"></div>
+          <div><label for="a1b_institution" style="display:block;font-size:13px;font-weight:700;color:#c86d10;margin-bottom:6px;">Institution</label><input type="text" id="a1b_institution" placeholder="Your institution" style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;pointer-events:auto;user-select:text;-webkit-user-select:text;"></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px;">
+          <div><label for="a1b_discipline" style="display:block;font-size:13px;font-weight:700;color:#c86d10;margin-bottom:6px;">Discipline Group</label><select id="a1b_discipline" style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;background:#fff;pointer-events:auto;"><option value="">Select</option><option value="Physical Science, Engineering and Mathematics">Physical Science, Eng &amp; Maths</option><option value="Arts and Humanities">Arts and Humanities</option><option value="Education">Education</option><option value="Social Sciences, Law and Business">Social Sci, Law &amp; Business</option><option value="Medicine, Health and Life Sciences">Medicine, Health &amp; Life Sci</option></select></div>
+          <div><label for="a1b_module" style="display:block;font-size:13px;font-weight:700;color:#c86d10;margin-bottom:6px;">Module Title &amp; Code</label><input type="text" id="a1b_module" placeholder="e.g. BUS7001" style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;pointer-events:auto;user-select:text;-webkit-user-select:text;"></div>
+          <div><label for="a1b_level" style="display:block;font-size:13px;font-weight:700;color:#c86d10;margin-bottom:6px;">FHEQ Level</label><select id="a1b_level" style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;background:#fff;pointer-events:auto;"><option value="">Select</option><option value="Level 4">Level 4</option><option value="Level 5">Level 5</option><option value="Level 6">Level 6</option><option value="Level 7">Level 7</option><option value="Level 8">Level 8</option></select></div>
+        </div>
+        <div style="margin-bottom:16px;"><label style="display:block;font-size:13px;font-weight:700;color:#c86d10;margin-bottom:6px;">Which IAICF competencies have you selected and why?</label><textarea id="a1b_competencies" rows="5" placeholder="List competency numbers and explain why each is relevant..." style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;resize:vertical;pointer-events:auto;user-select:text;-webkit-user-select:text;"></textarea></div>
+        <div style="margin-bottom:16px;"><label style="display:block;font-size:13px;font-weight:700;color:#c86d10;margin-bottom:6px;">How would you teach these competencies within your module?</label><textarea id="a1b_teaching" rows="4" placeholder="Describe teaching activities, assessment approaches..." style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;resize:vertical;pointer-events:auto;user-select:text;-webkit-user-select:text;"></textarea></div>
+        <div style="margin-bottom:16px;"><label style="display:block;font-size:13px;font-weight:700;color:#c86d10;margin-bottom:6px;">What barriers or challenges do you anticipate?</label><textarea id="a1b_barriers" rows="3" placeholder="Describe any challenges..." style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;resize:vertical;pointer-events:auto;user-select:text;-webkit-user-select:text;"></textarea></div>
+        <div style="text-align:center;margin-top:20px;"><button onclick="submitA1b()" style="background:#f47920;color:#fff;border:none;padding:14px 40px;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;pointer-events:auto;">Submit Responses via Email</button></div>
+      </div>
     </div>
+    <script>
+    function submitA1b(){var n=document.getElementById('a1b_name').value.trim();var inst=document.getElementById('a1b_institution').value.trim();var disc=document.getElementById('a1b_discipline').value;if(!n||!inst||!disc){alert('Please complete Name, Institution, and Discipline Group.');return;}var b='IAICF Activity 1B Module Mapping\n========================\n\nName: '+n+'\nInstitution: '+inst+'\nDiscipline: '+disc+'\nModule: '+document.getElementById('a1b_module').value+'\nFHEQ Level: '+document.getElementById('a1b_level').value+'\n\nSelected Competencies:\n'+document.getElementById('a1b_competencies').value+'\n\nTeaching Approach:\n'+document.getElementById('a1b_teaching').value+'\n\nBarriers:\n'+document.getElementById('a1b_barriers').value;window.location.href='mailto:e.khavandkar@bham.ac.uk,e.khavandkar@ucl.ac.uk?subject='+encodeURIComponent('IAICF Activity 1B - '+n)+'&body='+encodeURIComponent(b);}
+    </script>
+
+</div>
 
   </div>
 </div>
@@ -4521,7 +4593,35 @@ details summary > span:first-child { transition: transform 0.15s; }
 
     <div style="background:#F8F8F6;border:1px dashed #999;border-radius:8px;padding:12px 16px;margin-top:20px;font-size:12.5px;line-height:1.7;color:#3a3a38;">
       <strong style="color:#1a3a6b;">What happens with your findings:</strong> your completed audit will be used to identify equity revisions needed in the IAICF v3.0 framework before publication. Critical and Significant concerns will be addressed in framework wording. Patterns across workshops will inform implementation guidance for institutions. Your institution will be credited collectively - individual contributions will not be identified.
+    
+
+    <div style="margin-top:2.5rem;border-top:2px solid #A32D2D;padding-top:1.5rem;">
+      <div style="background:linear-gradient(135deg,#A32D2D 0%,#7a1a1a 100%);border-radius:10px;padding:18px 22px;margin-bottom:18px;color:#fff;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#FFD5D5;margin-bottom:6px;">Interactive Response Form</div>
+        <div style="font-size:18px;font-weight:700;">Activity 3: Equity Review</div>
+        <div style="font-size:13px;opacity:0.9;margin-top:6px;">Examine the framework for equity barriers across six dimensions and submit your analysis to the IAICF research team.</div>
+      </div>
+      <div id="form-a3" style="pointer-events:auto;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
+          <div><label for="a3_name" style="display:block;font-size:13px;font-weight:700;color:#A32D2D;margin-bottom:6px;">Your Name</label><input type="text" id="a3_name" placeholder="Full name" style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;pointer-events:auto;user-select:text;-webkit-user-select:text;"></div>
+          <div><label for="a3_institution" style="display:block;font-size:13px;font-weight:700;color:#A32D2D;margin-bottom:6px;">Institution</label><input type="text" id="a3_institution" placeholder="Your institution" style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;pointer-events:auto;user-select:text;-webkit-user-select:text;"></div>
+        </div>
+        <div style="margin-bottom:16px;"><label for="a3_discipline" style="display:block;font-size:13px;font-weight:700;color:#A32D2D;margin-bottom:6px;">Discipline Group</label><select id="a3_discipline" style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;background:#fff;pointer-events:auto;"><option value="">Select your discipline group</option><option value="Physical Science, Engineering and Mathematics">Physical Science, Engineering and Mathematics</option><option value="Arts and Humanities">Arts and Humanities</option><option value="Education">Education</option><option value="Social Sciences, Law and Business">Social Sciences, Law and Business</option><option value="Medicine, Health and Life Sciences">Medicine, Health and Life Sciences</option></select></div>
+        <div style="margin-bottom:16px;"><label style="display:block;font-size:13px;font-weight:700;color:#A32D2D;margin-bottom:6px;">Access and Resources: Do any competencies assume access not equally available to all students?</label><textarea id="a3_access" rows="3" placeholder="Identify specific competencies and access assumptions..." style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;resize:vertical;pointer-events:auto;user-select:text;-webkit-user-select:text;"></textarea></div>
+        <div style="margin-bottom:16px;"><label style="display:block;font-size:13px;font-weight:700;color:#A32D2D;margin-bottom:6px;">Prior Knowledge: Do any competencies assume prior technical knowledge that could disadvantage certain groups?</label><textarea id="a3_prior" rows="3" placeholder="Identify specific concerns..." style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;resize:vertical;pointer-events:auto;user-select:text;-webkit-user-select:text;"></textarea></div>
+        <div style="margin-bottom:16px;"><label style="display:block;font-size:13px;font-weight:700;color:#A32D2D;margin-bottom:6px;">Language: Do any descriptors use exclusionary language or assume English-language AI tools?</label><textarea id="a3_language" rows="3" placeholder="Identify language concerns..." style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;resize:vertical;pointer-events:auto;user-select:text;-webkit-user-select:text;"></textarea></div>
+        <div style="margin-bottom:16px;"><label style="display:block;font-size:13px;font-weight:700;color:#A32D2D;margin-bottom:6px;">Neurodiversity: Do any competencies present barriers for neurodiverse students?</label><textarea id="a3_neuro" rows="3" placeholder="Identify specific concerns..." style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;resize:vertical;pointer-events:auto;user-select:text;-webkit-user-select:text;"></textarea></div>
+        <div style="margin-bottom:16px;"><label style="display:block;font-size:13px;font-weight:700;color:#A32D2D;margin-bottom:6px;">Cultural Specificity: Do any competencies reflect non-universal cultural norms?</label><textarea id="a3_cultural" rows="3" placeholder="Identify cultural assumptions..." style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;resize:vertical;pointer-events:auto;user-select:text;-webkit-user-select:text;"></textarea></div>
+        <div style="margin-bottom:16px;"><label style="display:block;font-size:13px;font-weight:700;color:#A32D2D;margin-bottom:6px;">Structural Exclusion: Are there systemic barriers preventing equitable implementation?</label><textarea id="a3_structural" rows="3" placeholder="Describe structural concerns..." style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;resize:vertical;pointer-events:auto;user-select:text;-webkit-user-select:text;"></textarea></div>
+        <div style="margin-bottom:16px;"><label style="display:block;font-size:13px;font-weight:700;color:#A32D2D;margin-bottom:6px;">Proposed Revisions or Mitigations</label><textarea id="a3_revisions" rows="4" placeholder="Suggest revisions to wording or implementation mitigations..." style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;font-family:inherit;box-sizing:border-box;resize:vertical;pointer-events:auto;user-select:text;-webkit-user-select:text;"></textarea></div>
+        <div style="text-align:center;margin-top:20px;"><button onclick="submitA3()" style="background:#A32D2D;color:#fff;border:none;padding:14px 40px;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;pointer-events:auto;">Submit Responses via Email</button></div>
+      </div>
     </div>
+    <script>
+    function submitA3(){var n=document.getElementById('a3_name').value.trim();var inst=document.getElementById('a3_institution').value.trim();var disc=document.getElementById('a3_discipline').value;if(!n||!inst||!disc){alert('Please complete Name, Institution, and Discipline Group.');return;}var b='IAICF Activity 3 Equity Review\n========================\n\nName: '+n+'\nInstitution: '+inst+'\nDiscipline: '+disc+'\n\nACCESS AND RESOURCES:\n'+document.getElementById('a3_access').value+'\n\nPRIOR KNOWLEDGE:\n'+document.getElementById('a3_prior').value+'\n\nLANGUAGE:\n'+document.getElementById('a3_language').value+'\n\nNEURODIVERSITY:\n'+document.getElementById('a3_neuro').value+'\n\nCULTURAL SPECIFICITY:\n'+document.getElementById('a3_cultural').value+'\n\nSTRUCTURAL EXCLUSION:\n'+document.getElementById('a3_structural').value+'\n\nPROPOSED REVISIONS:\n'+document.getElementById('a3_revisions').value;window.location.href='mailto:e.khavandkar@bham.ac.uk,e.khavandkar@ucl.ac.uk?subject='+encodeURIComponent('IAICF Activity 3 Equity Review - '+n)+'&body='+encodeURIComponent(b);}
+    </script>
+
+</div>
 
   </div>
 </div>
@@ -6305,12 +6405,12 @@ function showPage(id){
 
 <script>
 (function(){
-  document.addEventListener('contextmenu', function(e){ e.preventDefault(); return false; }, true);
+  document.addEventListener('contextmenu', function(e){ var t=e.target&&e.target.tagName?e.target.tagName:''; if(t==='INPUT'||t==='TEXTAREA'||t==='SELECT')return true; e.preventDefault(); return false; }, true);
   ['copy','cut','paste'].forEach(function(evt){
-    document.addEventListener(evt, function(e){ e.preventDefault(); return false; }, true);
+    document.addEventListener(evt, function(e){ var t=e.target&&e.target.tagName?e.target.tagName:''; if(t==='INPUT'||t==='TEXTAREA'||t==='SELECT')return true; e.preventDefault(); return false; }, true);
   });
   document.addEventListener('dragstart', function(e){ e.preventDefault(); return false; }, true);
-  document.addEventListener('selectstart', function(e){ e.preventDefault(); return false; }, true);
+  document.addEventListener('selectstart', function(e){ var t=e.target&&e.target.tagName?e.target.tagName:''; if(t==='INPUT'||t==='TEXTAREA'||t==='SELECT')return true; e.preventDefault(); return false; }, true);
   document.addEventListener('keydown', function(e){
     var key = e.key ? e.key.toLowerCase() : '';
     var ctrl = e.ctrlKey || e.metaKey;
@@ -6319,8 +6419,9 @@ function showPage(id){
     if (ctrl && key === 's') { e.preventDefault(); return false; }
     if (ctrl && key === 'p') { e.preventDefault(); return false; }
     if (ctrl && e.shiftKey && (key === 'i' || key === 'j' || key === 'c')) { e.preventDefault(); return false; }
-    if (ctrl && (key === 'c' || key === 'x' || key === 'a')) { e.preventDefault(); return false; }
+    if (ctrl && (key === 'c' || key === 'x' || key === 'a')) { var tg=e.target&&e.target.tagName?e.target.tagName:''; if(tg==='INPUT'||tg==='TEXTAREA')return true; e.preventDefault(); return false; }
     if (e.keyCode === 44 || key === 'printscreen') {
+      // Best-effort clipboard clear on PrintScreen
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText('').catch(function(){});
       }
@@ -6328,6 +6429,7 @@ function showPage(id){
     }
     return true;
   }, true);
+
   window.addEventListener('blur', function(){ document.body.classList.add('window-blurred'); });
   window.addEventListener('focus', function(){ document.body.classList.remove('window-blurred'); });
   var devtoolsDetected = false;
@@ -6360,7 +6462,9 @@ function showPage(id){
   ctx.fillStyle = 'rgba(0,32,96,0.6)';
   ctx.rotate(-0.4);
   ctx.fillText('IAICF CONFIDENTIAL', 30, 120);
-  ctx.fillText('Advance HE 2026', 30, 150);
+  ctx.font = '13px Arial, Helvetica, sans-serif';
+  ctx.fillStyle = 'rgba(0,32,96,0.55)';
+  ctx.fillText('\u00A9 Khavandkar, E. et al., Advance HE 2026', 30, 150);
 
   var wm = document.createElement('div');
   wm.id = 'iaicf-watermark';
