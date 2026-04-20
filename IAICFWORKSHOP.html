@@ -27,7 +27,7 @@ summary, .nav-btn { cursor: pointer !important; }
     font-family: Arial, sans-serif; font-size: 14pt; color: #000; text-align: center; width: 80%;
   }
 }
-body.window-blurred #content-wrapper { filter: blur(8px); transition: filter 0.1s; }
+
 </style>
 
 
@@ -6430,8 +6430,7 @@ function showPage(id){
     return true;
   }, true);
 
-  window.addEventListener('blur', function(){ document.body.classList.add('window-blurred'); });
-  window.addEventListener('focus', function(){ document.body.classList.remove('window-blurred'); });
+
   var devtoolsDetected = false;
   setInterval(function(){
     var threshold = 160;
