@@ -294,6 +294,7 @@ details summary > span:first-child { transition: transform 0.15s; }
 .nb-tch.active { background:#0F6E56; color:#fff; border-color:transparent; }
 .nb-tec.active { background:#185FA5; color:#fff; border-color:transparent; }
 .nb-team.active { background:#002060; color:#fff; border-color:transparent; }
+.nb-contributors.active { background:#01B7C6; color:#fff; border-color:transparent; }
 /* Readability: ensure no grey text on the dashboard chrome */
 .page p, .page div, .page span, .page td, .page th { color: inherit; }
 </style>
@@ -317,6 +318,7 @@ details summary > span:first-child { transition: transform 0.15s; }
   <button class="nav-btn nb-tch" onclick="showPage('teaching')">Teaching Cheatsheet</button>
   <button class="nav-btn nb-tec" onclick="showPage('technologies')">Technologies Cheatsheet</button>
   <button class="nav-btn nb-team" onclick="showPage('team')">Project Team</button>
+  <button class="nav-btn nb-contributors" onclick="showPage('contributors')">Contributors</button>
 </div>
 
 
@@ -6164,6 +6166,67 @@ details summary > span:first-child { transition: transform 0.15s; }
       </div>
     </div>
 </div>
+
+<div id="page-contributors" class="page">
+  <div style="max-width:960px;margin:0 auto;padding:0.5rem 0 2rem;">
+
+    <!-- HERO -->
+    <div style="font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:28px;font-weight:700;color:#002060;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:0.4rem;">Contributors</div>
+    <div style="height:3px;background:linear-gradient(to right,#002060,#01B7C6,#FB8E15);border-radius:2px;margin-bottom:2rem;"></div>
+
+    <!-- Intro paragraph -->
+    <div style="background:#f0f4fa;border-left:4px solid #002060;border-radius:0 8px 8px 0;padding:20px 24px;margin-bottom:2rem;">
+      <div style="font-size:15px;color:#1a1a18;line-height:1.85;">The IAICF framework is the product of a broad national effort, shaped by hundreds of UK academic colleagues across disciplines and institutions. This page acknowledges the contributions of the expert panel members and the wider community of colleagues whose input, at every stage, informed the development and refinement of the framework.</div>
+    </div>
+
+    <!-- Contributions stats band -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:2rem;">
+      <div style="background:#002060;color:#fff;border-radius:10px;padding:16px 10px;text-align:center;">
+        <div style="font-size:26px;font-weight:700;line-height:1;">856</div>
+        <div style="font-size:11px;margin-top:6px;opacity:0.95;line-height:1.4;">Expressions of Interest received in Phase 1</div>
+      </div>
+      <div style="background:#01B7C6;color:#fff;border-radius:10px;padding:16px 10px;text-align:center;">
+        <div style="font-size:26px;font-weight:700;line-height:1;">622</div>
+        <div style="font-size:11px;margin-top:6px;opacity:0.95;line-height:1.4;">Completed Phase 1 National Survey responses</div>
+      </div>
+      <div style="background:#FB8E15;color:#fff;border-radius:10px;padding:16px 10px;text-align:center;">
+        <div style="font-size:26px;font-weight:700;line-height:1;">150</div>
+        <div style="font-size:11px;margin-top:6px;opacity:0.95;line-height:1.4;">Discipline panellists across five panels</div>
+      </div>
+      <div style="background:#A32D2D;color:#fff;border-radius:10px;padding:16px 10px;text-align:center;">
+        <div style="font-size:26px;font-weight:700;line-height:1;">103</div>
+        <div style="font-size:11px;margin-top:6px;opacity:0.95;line-height:1.4;">National Interdisciplinary Panel members</div>
+      </div>
+    </div>
+
+    <!-- Context paragraphs -->
+    <div style="margin-bottom:2rem;">
+      <p style="font-size:15px;color:#1a1a18;line-height:1.85;margin-bottom:1rem;">
+        In the <strong style="color:#002060;">first phase</strong>, the National Survey received 856 expressions of interest from academic colleagues across the UK, with 622 academics from 61 universities completing the survey, representing an exceptional breadth of disciplines, institutions, and professional contexts. The <strong style="color:#01B7C6;">second phase</strong> brought together a National Expert Panel to review, assess, and refine the emerging framework. This included five discipline-specific panel sessions across <em>Physical Sciences, Engineering and Mathematics</em>; <em>Arts and Humanities</em>; <em>Education</em>; <em>Social Sciences, Law and Business</em>; and <em>Medicine, Health and Life Sciences</em>.
+      </p>
+      <p style="font-size:15px;color:#1a1a18;line-height:1.85;margin-bottom:1rem;">
+        Across these sessions, 150 academics contributed over 10 hours of deliberation, critically examining the framework&apos;s competencies within their respective disciplinary contexts. A further 103 academics attended the <em>National Interdisciplinary Expert Panel</em>, bringing together colleagues from across all disciplines to assess the framework holistically and reach consensus on its final tier classifications and architecture. The <strong style="color:#f47920;">third phase</strong>, which this dashboard accompanies, engages over 400 participants across seven host universities and three countries in the co-design of curriculum and implementation resources.
+      </p>
+    </div>
+
+    <!-- Full list placeholder card -->
+    <div style="background:#F4F3F0;border:1px solid #d8d4c8;border-left:4px solid #f47920;border-radius:10px;padding:24px 28px;text-align:center;">
+      <div style="font-size:36px;margin-bottom:10px;">&#128221;</div>
+      <div style="font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:20px;font-weight:700;color:#002060;margin-bottom:10px;">Full List to be Confirmed</div>
+      <p style="font-size:14px;color:#1a1a18;line-height:1.8;max-width:620px;margin:0 auto;">
+        The full list of contributors to the IAICF project - including <strong>National Survey respondents</strong>, <strong>National Expert Panel members</strong> (across discipline-specific and interdisciplinary sessions), and <strong>Phase 3 Curriculum Prototyping and Co-design Workshop participants</strong> - will be confirmed and published here in due course, with the consent of named contributors. All contributions, named and unnamed, are gratefully acknowledged.
+      </p>
+    </div>
+
+    <!-- Acknowledgement -->
+    <div style="margin-top:2rem;padding:18px 22px;background:#fff;border:1px solid #e0dcd2;border-radius:8px;">
+      <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#002060;margin-bottom:8px;font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;">Acknowledgement</div>
+      <p style="font-size:13.5px;color:#1a1a18;line-height:1.8;margin:0;">The Principal Investigator and IAICF Research Consortium extend their sincere thanks to every colleague who has given time, expertise, and critical insight to this project. A framework of this kind can only be built through genuine collective effort, and the breadth of disciplines and institutions represented in the contributor community is what gives the IAICF its authority as a national, discipline-informed reference.</p>
+    </div>
+
+  </div>
+</div>
+
 </div>
 
 
@@ -6179,7 +6242,8 @@ function showPage(id){
     'domain4':'nb-d4','domain5':'nb-d5','domain6':'nb-d6',
     'audit':'nb-audit','activity1b':'nb-a1b','activity3':'nb-a3',
     'assessment':'nb-asm','teaching':'nb-tch','technologies':'nb-tec',
-    'team':'nb-team'
+    'team':'nb-team',
+    'contributors':'nb-contributors'
   };
   var btn = document.querySelector('.'+btnMap[id]);
   if(btn) btn.classList.add('active');
