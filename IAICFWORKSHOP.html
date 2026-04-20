@@ -6211,6 +6211,16 @@ function showPage(id){
       </div>
     </div>
 
+    <!-- Copyright & confidentiality notice - centred -->
+    <div style="border-top:0.5px solid #e0dcd2;padding-top:0.75rem;padding-bottom:0.5rem;">
+      <div style="background:#F4F3F0;border:1px solid #d8d4c8;border-left:3px solid #002060;border-radius:6px;padding:10px 16px;max-width:920px;margin:0 auto;">
+        <div style="font-family:'HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;color:#1a1a18;line-height:1.65;text-align:center;">
+          <span style="color:#002060;font-weight:700;">&copy; 2026 Khavandkar, E. et al. &middot; Advance HE. All rights reserved.</span><br>
+          This material is confidential and has been prepared exclusively for participants of the <strong>National Curriculum Prototyping and Co-design Workshop</strong>. It must not be copied, reproduced, distributed, or shared in any form without explicit prior written consent. Any unauthorised use may constitute a breach of intellectual property rights.
+        </div>
+      </div>
+    </div>
+
     <!-- Funding line - centred -->
     <div style="border-top:0.5px solid #e0dcd2;padding-top:0.75rem;text-align:center;">
       <div style="font-family:'DM Sans','HelveticaNeue',Arial,sans-serif;font-size:11px;color:#8a8880;font-style:italic;">
@@ -6272,6 +6282,29 @@ function showPage(id){
   document.addEventListener('touchstart', function(e){
     if (e.touches && e.touches.length > 1) { e.preventDefault(); }
   }, {passive: false});
+})();
+</script>
+
+
+<script>
+(function(){
+  // Build repeating diagonal watermark using a canvas-generated tile
+  var canvas = document.createElement('canvas');
+  canvas.width = 400; canvas.height = 200;
+  var ctx = canvas.getContext('2d');
+  ctx.font = 'bold 18px Arial, Helvetica, sans-serif';
+  ctx.fillStyle = 'rgba(0,32,96,0.6)';
+  ctx.rotate(-0.4);
+  ctx.fillText('IAICF CONFIDENTIAL', 30, 120);
+  ctx.fillText('Advance HE 2026', 30, 150);
+
+  var wm = document.createElement('div');
+  wm.id = 'iaicf-watermark';
+  wm.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:99999;opacity:0.07;';
+  wm.style.backgroundImage = 'url(' + canvas.toDataURL() + ')';
+  wm.style.backgroundRepeat = 'repeat';
+  wm.style.backgroundSize = '400px 200px';
+  document.body.appendChild(wm);
 })();
 </script>
 
